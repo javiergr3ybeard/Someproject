@@ -1,7 +1,6 @@
 body {
-    background-image: url(../images/pokedex_vector_OGartistCristopheros.png);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-    background-color: black;
+    background-image: url(../images/pokedex_vector_OGartistCristopheros.png), url(../images/Pokemon_Original_Starters.jpg), linear-gradient(0deg ,#ffca00,#ff9400);
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, contain;
+    background-position: right, left;
 }
