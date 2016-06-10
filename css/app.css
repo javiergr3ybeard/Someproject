@@ -14,31 +14,31 @@ ul {
 
 
 p {
-background: none;
+    background: none;
 }
 
 #pokeSprite {
-position: relative;
-top: -1.3em;
-left: 51.9em;
+    position: relative;
+    top: 4.7em;
+    left: 51.9em;
 }
 
 #titles {
-font-weight: bold;
-position: relative;
-top: 8em;
-left: 48em;
+    font-weight: bold;
+    position: relative;
+    top: 14em;
+    left: 48em;
 }
 
 #formDetails {
-position:relative;
-top: -2.35em;
-left: 53em;
+    position:relative;
+    top: 3.7em;
+    left: 53em;
 }
 
 #pokemonForm {
-position: relative;
-top: 8em;
+    position: relative;
+    top: -25.3em;
 }
 
 button {
