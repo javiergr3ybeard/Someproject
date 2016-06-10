@@ -1,19 +1,35 @@
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pokédex</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.css">
-        <link rel="stylesheet" href="css/app.css">
-    </head>
-    <body>
-        <p>HELP US ALL</p>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/2.1.0/what-input.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.js"></script>
-        <script src="js/app.js"></script>
-    </body>
+<div class="row">
+    <div class="small-offset-2 small-4 columns">
+        <form id="pokemonForm">
+                <div class="template">
+                    <input type="text"
+                           name="pokemon-name"
+                           class="input-group-field"
+                           placeholder="Which Gen 1 Pokémon Shall We Display?"
+                           required>
+                    <div class="input-group-button">
+                        <button type="submit" class="success button small">Search</button>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/2.1.0/what-input.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/app2.js"></script>
+</body>
 </html>
