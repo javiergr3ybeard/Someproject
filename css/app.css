@@ -3,6 +3,8 @@ body {
     background-repeat: no-repeat, no-repeat;
     background-size: auto, contain;
     background-position: right, left;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 ul {
@@ -10,8 +12,33 @@ ul {
 
 }
 
-form {
-    align: left;
+
+p {
+background: none;
+}
+
+#pokeSprite {
+position: relative;
+top: -1.3em;
+left: 51.9em;
+}
+
+#titles {
+font-weight: bold;
+position: relative;
+top: 8em;
+left: 48em;
+}
+
+#formDetails {
+position:relative;
+top: -2.35em;
+left: 53em;
+}
+
+#pokemonForm {
+position: relative;
+top: 8em;
 }
 
 button {
@@ -24,7 +51,6 @@ button {
     background-color: transparent;
     color: darkgrey;
     position: relative;
-    top: 29.5em;
+    top: 20.5em;
     left: 77.7em;
-
 }
