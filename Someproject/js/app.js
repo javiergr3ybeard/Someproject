@@ -1,4 +1,4 @@
-var url = 'https://pokeapi.co/api/v2/pokemon/?limit=151'
+var url = 'https://40ca7692.ngrok.io/api/v2/pokemon/?limit=151'
 
 var template = $('.template')
   .clone()

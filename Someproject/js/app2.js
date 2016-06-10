@@ -1,21 +1,28 @@
-var url = 'http://pokeapi.co/api/v2/ability/'
+$(document).on('click', 'a.select', handleSelectPokemonForm);
 
-$('a[data-remote-pokemon="true"]').on('click', function(e) {
-  e.preventDefault();
-  $.ajax({
-    url: $(this).attr('href'),
-    method: 'get',
-    success: loadPokemon
-  });
-});
+function handleSelectPokemonForm(ev) {
+  ev.preventDefault();
+  var li = $(ev.currentTarget).closest('li');
+  var id = li.attr('data-id');
+  selectPokemon(id);
+}
 
-function loadPokemon(pokemon) {
+function selectPokemon(pokemon) {
   people.push({
-    firstName: pokemon.name,
-    lastName: pokemon.stats[0].stat.name,
-    secret: pokemon.abilities[0].ability.name
+    name: pokemon.name,
+    ability: pokemon.abilities[0].ability.name,
+    stats: pokemon.stats[0].stat.name
   });
 }
+
+// $('a[data-remote-pokemon="true"]').on('click', function(e) {
+//   e.preventDefault();
+//   $.ajax({
+//     url: $(this).attr('href'),
+//     method: 'get',
+//     success: loadPokemon
+//   });
+// });
 
 
 // function getAllPokemon(data) {
