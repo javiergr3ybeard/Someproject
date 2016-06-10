@@ -10,6 +10,21 @@ ul {
 
 }
 
-h2 {
-    align: right;
+form {
+    align: left;
+}
+
+button {
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+}
+
+.button {
+    background-color: transparent;
+    color: darkgrey;
+    position: relative;
+    top: 29.5em;
+    left: 77.7em;
+
 }
