@@ -34,6 +34,7 @@ p {
     position:relative;
     top: 3.7em;
     left: 53em;
+    visibility: hidden;
 }
 
 #pokemonForm {
@@ -54,3 +55,7 @@ button {
     top: 20.5em;
     left: 77.7em;
 }
+
+.button:hover, .button:focus {
+    background-color: transparent;
+    color: black; }
