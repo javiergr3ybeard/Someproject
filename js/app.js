@@ -1,6 +1,6 @@
 $(document).foundation();
 
-var url = 'http://40ca7692.ngrok.io/api/v2/pokemon/?limit=151';
+var url = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
 
 var template = $('.template')
     .clone()
@@ -15,14 +15,53 @@ function loadPokemon(pokemons) {
 
 function addPokemon(pokemon) {
     var li = template.clone();
-    li.find('.pokemon-name a')
-        .text(pokemon.name);
-        //.attr('href', pokemon.url);
+    li.text(pokemon.name)
+        .attr('value', pokemon.url);
 
     li.attr('data-id', pokemon.id);
-    $('#pokemonList').append(li);
-
+    $('#pokeSearch').append(li);
 }
+
+function lookInBush(pokemon) {
+  $.each(pokemon.forms, function(i, forms) {
+    $('#pokeName').text(forms.name)
+    $.each(pokemon.types, function(i, Type) {
+      $('#pokeType1').text(Type.type.name)
+      $.each(pokemon.abilities, function(i, ability) {
+        $("#pokeAbility1").text(ability.ability.name)
+      });
+    });
+  });
+}
+
+
+// function pokeType(pokemon) {
+//     $.each(pokemon.types, function(i, Type) {
+//       $('#pokeType1').text(Type.type.name)
+//   });
+// }
+
+$('#pokeSearch').on('change', function(e) {
+  e.preventDefault();
+    var pokeUrl = $('#pokeSearch').val();
+    $.get({
+      url: pokeUrl,
+      success: lookInBush.bind(this),
+      // success: pokeType.bind(this)
+    });
+});
+
+// $(document).on('click', 'a',function(e){
+//     e.preventDefault();
+//
+//     var link = $(e.currentTarget);
+//     $.get({
+//       url: $(this).attr('href'),
+//       success: attributes.bind(this)
+//     });
+//
+// });
+
 $.get({
     url: url,
     success: loadPokemon
